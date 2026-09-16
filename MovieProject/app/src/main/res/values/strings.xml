@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieProject</string>
+    <string name="no_data">Нет данных!</string>
+    <string name="show_favorite">Отобразить любимый фильм</string>
+    <string name="save_favorite">Сохранить любимый фильм</string>
+    <string name="movie_hint">Заполни меня</string>
+</resources>

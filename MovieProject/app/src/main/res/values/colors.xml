@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_button">#7B61C8</color>
+    <color name="purple_button_pressed">#5E46A8</color>
+    <color name="screen_background">#FAF7FC</color>
+    <color name="text_primary">#5A5A5A</color>
+    <color name="launcher_bg">#7B61C8</color>
+</resources>

@@ -1,0 +1,309 @@
+<mxfile host="app.diagrams.net" agent="SWAY" pages="3">
+  <diagram id="screens" name="Экраны">
+    <mxGraphModel dx="2046" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=20;fontStyle=1;fontColor=#111827;" value="Экраны приложения SWAY" vertex="1">
+          <mxGeometry height="36" width="800" x="400" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="s-auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;align=center;" value="&lt;b&gt;Вход / Регистрация&lt;/b&gt;&lt;br&gt;AuthScreen&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;Войти · Зарегистрироваться&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="80" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s-catalog" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=2;fontSize=13;align=center;" value="&lt;b&gt;Каталог мест&lt;/b&gt;&lt;br&gt;CatalogScreen&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;список с изображениями&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="690" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="s-details" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;align=center;" value="&lt;b&gt;Карточка места&lt;/b&gt;&lt;br&gt;PlaceDetailsScreen&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;фото · описание · погода&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="690" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="s-trips" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=13;align=center;" value="&lt;b&gt;Мои поездки&lt;/b&gt;&lt;br&gt;MyTripsScreen&lt;br&gt;&lt;font color=&#39;#1D4ED8&#39;&gt;только авторизованный&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="1080" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="s-recognize" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=13;align=center;" value="&lt;b&gt;Распознать по фото&lt;/b&gt;&lt;br&gt;RecognizeScreen&lt;br&gt;&lt;font color=&#39;#1D4ED8&#39;&gt;камера / галерея · TFLite&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="1080" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="s-profile" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;align=center;" value="&lt;b&gt;Профиль&lt;/b&gt;&lt;br&gt;ProfileScreen&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;гость: войти · пользователь: имя, выход&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="80" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="api" parent="1" style="shape=process;whiteSpace=wrap;html=1;rounded=1;fillColor=#F3F4F6;strokeColor=#4B5563;fontSize=12;" value="&lt;b&gt;Сервис погоды&lt;/b&gt;&lt;br&gt;&amp;lt;&amp;lt;система&amp;gt;&amp;gt;&lt;br&gt;JSON API" vertex="1">
+          <mxGeometry height="80" width="220" x="690" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="e-auth-cat" edge="1" parent="1" source="s-auth" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.4;strokeColor=#111827;fontSize=10;fontColor=#6B7280;" target="s-catalog" value="после входа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-cat-det" edge="1" parent="1" source="s-catalog" style="endArrow=block;endFill=1;html=1;rounded=0;strokeWidth=1.4;strokeColor=#111827;fontSize=10;fontColor=#6B7280;" target="s-details" value="открыть место">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-cat-trips" edge="1" parent="1" source="s-catalog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.4;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;" target="s-trips" value="меню">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-cat-profile" edge="1" parent="1" source="s-catalog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.4;strokeColor=#111827;fontSize=10;fontColor=#6B7280;" target="s-profile" value="меню">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="165" />
+              <mxPoint x="400" y="425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-profile-auth" edge="1" parent="1" source="s-profile" style="endArrow=block;endFill=1;html=1;rounded=0;strokeWidth=1.4;strokeColor=#111827;fontSize=10;fontColor=#6B7280;" target="s-auth" value="гость → вход">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-profile-trips" edge="1" parent="1" source="s-profile" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.4;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;" target="s-trips" value="мои поездки">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="500" />
+              <mxPoint x="1420" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-cat-rec" edge="1" parent="1" source="s-catalog" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.4;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;" target="s-recognize" value="меню">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="165" />
+              <mxPoint x="1020" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-det-weather" edge="1" parent="1" source="s-details" style="endArrow=open;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#4B5563;fontSize=10;fontColor=#4B5563;" target="api" value="include: погода">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-rec-cat" edge="1" parent="1" source="s-recognize" style="endArrow=block;endFill=1;html=1;rounded=1;strokeWidth=1.2;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;dashed=1;" target="s-catalog" value="подходящие места">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="240" />
+              <mxPoint x="1370" y="90" />
+              <mxPoint x="1190" y="90" />
+              <mxPoint x="800" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-det-guest" parent="1" style="endArrow=none;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#6B7280;align=left;" value="гость: только просмотр" vertex="1">
+          <mxGeometry height="30" width="200" x="430" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="e-det-auth" parent="1" style="endArrow=none;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1D4ED8;align=left;" value="пользователь: хочу / был / заметка" vertex="1">
+          <mxGeometry height="30" width="250" x="430" y="404" as="geometry" />
+        </mxCell>
+        <mxCell id="zone-guest" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=none;strokeColor=#9CA3AF;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=11;fontColor=#6B7280;" value="гость и пользователь" vertex="1">
+          <mxGeometry height="560" width="980" x="50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="zone-auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=none;strokeColor=#1D4ED8;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=11;fontColor=#1D4ED8;" value="только авторизованный" vertex="1">
+          <mxGeometry height="380" width="280" x="1048" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="layers" name="Слои экранов">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t2" value="Декомпозиция экранов SWAY на слои" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=20;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="400" y="16" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="rule" value="Dependency Rule: presentation → domain ← data. Domain ни от кого не зависит. Context, Retrofit, Room, TFLite живут только в data." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontColor=#6B7280;" vertex="1" parent="1">
+          <mxGeometry x="250" y="48" width="1200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="h-p" value="presentation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="120" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="h-d" value="domain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="470" width="120" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="h-a" value="data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="800" width="120" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="Вход / Регистрация" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#111827;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="180" y="90" width="280" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="Каталог мест" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#111827;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="480" y="90" width="280" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="Карточка места" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#111827;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="780" y="90" width="300" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="Мои поездки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#1D4ED8;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="90" width="250" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="Распознать по фото" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#1D4ED8;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="90" width="280" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="Профиль" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F9FAFB;strokeColor=#111827;strokeWidth=1.5;fontStyle=1;fontSize=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="90" width="280" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="AuthActivity / Fragment&lt;br&gt;AuthViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;поля логина, кнопки&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="196" y="140" width="248" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="CatalogFragment&lt;br&gt;CatalogViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;RecyclerView + картинки&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="496" y="140" width="248" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="PlaceDetailsFragment&lt;br&gt;PlaceDetailsViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;фото, текст, кнопки действий&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="796" y="140" width="268" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="MyTripsFragment&lt;br&gt;MyTripsViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;список хочу / был&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1116" y="140" width="218" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="RecognizeFragment&lt;br&gt;RecognizeViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;камера, превью, результат&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1386" y="140" width="248" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" value="ProfileFragment&lt;br&gt;ProfileViewModel&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;гость: CTA войти&lt;br&gt;пользователь: имя, выход&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="140" width="248" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;LoginUseCase&lt;br&gt;RegisterUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;User&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;AuthRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="196" y="280" width="248" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;GetPlacesUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;Place&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;PlaceRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="496" y="280" width="248" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;GetPlaceDetailsUseCase&lt;br&gt;GetWeatherUseCase&lt;br&gt;SaveWantToVisitUseCase&lt;br&gt;MarkVisitedUseCase&lt;br&gt;AddPlaceNoteUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;Place · Weather · Trip&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;PlaceRepository&lt;br&gt;WeatherRepository&lt;br&gt;TripRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="796" y="280" width="268" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;GetMyTripsUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;Trip · Place&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;TripRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1116" y="280" width="218" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="d5" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;RecognizePlaceUseCase&lt;br&gt;GetPlacesUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;Place · SceneType&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;RecognitionRepository&lt;br&gt;PlaceRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1386" y="280" width="248" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="d6" value="&lt;b&gt;UseCase&lt;/b&gt;&lt;br&gt;GetProfileUseCase&lt;br&gt;LogoutUseCase&lt;br&gt;&lt;b&gt;Entity&lt;/b&gt;&lt;br&gt;User&lt;br&gt;&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;AuthRepository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="280" width="248" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="AuthRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;сейчас: заглушка&lt;br&gt;потом: сессия / БД пользователей&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="196" y="620" width="248" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="PlaceRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;сейчас: 3–5 тестовых мест с URL картинок&lt;br&gt;потом: API + Room&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="496" y="620" width="248" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="PlaceRepositoryImpl&lt;br&gt;WeatherRepositoryImpl&lt;br&gt;TripRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;погода: JSON (сейчас фейк)&lt;br&gt;поездки: БД (сейчас заглушка)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="796" y="620" width="268" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="TripRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;чтение сохранённых поездок из БД&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1116" y="620" width="218" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="RecognitionRepositoryImpl&lt;br&gt;PlaceRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;сейчас: всегда «mountains»&lt;br&gt;потом: TFLite (.tflite)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1386" y="620" width="248" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="AuthRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;текущая сессия&lt;br&gt;гость → null user&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1686" y="620" width="248" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="note-zone" value="Зона ответственности колонки = один экран. ViewModel не знает про Retrofit/Room. UseCase не знает про Context." style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=12;fillColor=#FFFFFF;strokeColor=#D1D5DB;fontSize=11;fontColor=#374151;" vertex="1" parent="1">
+          <mxGeometry x="196" y="980" width="1738" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="details-zoom" name="Карточка места">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t3" value="Экран «Карточка места» — зоны ответственности (как рис. 6 в методичке)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=18;fontStyle=1;fontColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="200" y="24" width="1200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-ui" value="UI-событие" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-vm" value="ViewModel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="100" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-uc" value="UseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="100" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-repo" value="Repository" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="100" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-src" value="источник" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;html=1;strokeWidth=1.3;strokeColor=#111827;" edge="1" parent="1" source="flow-ui" target="flow-vm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;strokeWidth=1.3;strokeColor=#111827;" edge="1" parent="1" source="flow-vm" target="flow-uc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;strokeWidth=1.3;strokeColor=#111827;" edge="1" parent="1" source="flow-uc" target="flow-repo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;strokeWidth=1.3;strokeColor=#111827;" edge="1" parent="1" source="flow-repo" target="flow-src">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="back" value="Entity обратно тем же путём в UI" style="text;html=1;fontSize=11;fontColor=#6B7280;" vertex="1" parent="1">
+          <mxGeometry x="980" y="108" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="box-p" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="1440" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lp" value="presentation" style="text;html=1;fontStyle=1;fontSize=13;fontColor=#D97706;" vertex="1" parent="1">
+          <mxGeometry x="96" y="188" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="pp1" value="PlaceDetailsFragment&lt;br&gt;рендер фото, описания, погоды, кнопок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="224" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pp2" value="PlaceDetailsViewModel&lt;br&gt;принимает клики, вызывает use case,&lt;br&gt;отдаёт состояние экрана" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="440" y="224" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="pp3" value="Гость видит просмотр.&lt;br&gt;Кнопки «хочу / был / заметка»&lt;br&gt;ведут на вход, если нет сессии." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D97706;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="770" y="224" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="box-d" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="1440" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ld" value="domain — единственный слой, к которому имеет право обращаться экран" style="text;html=1;fontStyle=1;fontSize=13;fontColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="96" y="368" width="620" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="dd1" value="GetPlaceDetailsUseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="408" width="200" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dd2" value="GetWeatherUseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="408" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dd3" value="SaveWantToVisitUseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="530" y="408" width="200" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dd4" value="MarkVisitedUseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="408" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dd5" value="AddPlaceNoteUseCase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="950" y="408" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="de1" value="Place" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A7F3D0;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="de2" value="Weather" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A7F3D0;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="230" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="de3" value="Trip" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A7F3D0;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="480" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dr1" value="PlaceRepository" style="shape=process;whiteSpace=wrap;html=1;rounded=1;fillColor=#FFFFFF;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="488" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dr2" value="WeatherRepository" style="shape=process;whiteSpace=wrap;html=1;rounded=1;fillColor=#FFFFFF;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="488" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dr3" value="TripRepository" style="shape=process;whiteSpace=wrap;html=1;rounded=1;fillColor=#FFFFFF;strokeColor=#059669;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="920" y="488" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="dnote" value="интерфейсы, не реализации" style="text;html=1;fontSize=10;fontColor=#059669;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="500" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="box-a" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="1440" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="la" value="data" style="text;html=1;fontStyle=1;fontSize=13;fontColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="96" y="608" width="80" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="aa1" value="PlaceRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;тестовые места / позже API+Room&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="648" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aa2" value="WeatherRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;сейчас фейковый JSON&lt;br&gt;потом OpenWeather / mockapi&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="420" y="648" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aa3" value="TripRepositoryImpl&lt;br&gt;&lt;font color=&#39;#6B7280&#39;&gt;сейчас список в памяти&lt;br&gt;потом Room — сохранение в БД&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="730" y="648" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="aa4" value="Context / SharedPreferences / Room / Retrofit&lt;br&gt;сюда, не в domain" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="648" width="300" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

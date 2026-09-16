@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sway_primary">#1F6F8B</color>
+    <color name="sway_primary_dark">#145A73</color>
+    <color name="sway_background">#F4F1EA</color>
+    <color name="sway_surface">#FFFFFF</color>
+    <color name="sway_text">#1F2933</color>
+    <color name="launcher_bg">#1F6F8B</color>
+</resources>

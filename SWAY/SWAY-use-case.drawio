@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net" agent="SWAY">
+  <diagram id="sway-usecase" name="SWAY Use Case">
+    <mxGraphModel dx="2046" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#1F2937;" value="Диаграмма вариантов использования — SWAY" vertex="1">
+          <mxGeometry height="36" width="900" x="320" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;startSize=36;horizontal=1;container=0;collapsible=0;rounded=0;shadow=0;fillColor=#FAFBFC;strokeColor=#111827;strokeWidth=2;fontSize=16;fontColor=#111827;whiteSpace=wrap;" value="SWAY" vertex="1">
+          <mxGeometry height="932" width="990" x="270" y="38" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="system" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#FFFFFF;strokeColor=#D1D5DB;fontSize=11;fontColor=#374151;" value="белый — доступно гостю&lt;br&gt;синий — только авторизованному&lt;br&gt;пунктирный овал — без прямой связи с пользователем" vertex="1">
+          <mxGeometry height="70" width="420" x="520" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="guest" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;fontStyle=1;" value="Гость" vertex="1">
+          <mxGeometry height="70" width="34" x="90" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;fontStyle=1;" value="Авторизованный&#xa;пользователь" vertex="1">
+          <mxGeometry height="70" width="34" x="78" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="weather" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=13;fontStyle=1;" value="Сервис погоды" vertex="1">
+          <mxGeometry height="70" width="34" x="1400" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="weather-note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=10;fontColor=#6B7280;" value="&amp;lt;&amp;lt;система&amp;gt;&amp;gt;&#xa;JSON API" vertex="1">
+          <mxGeometry height="40" width="120" x="1358" y="392" as="geometry" />
+        </mxCell>
+        <mxCell id="gen" edge="1" parent="1" source="user" style="endArrow=block;endFill=0;endSize=14;html=1;rounded=0;strokeWidth=1.5;strokeColor=#111827;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="107" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uc-login" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;fontStyle=0;" value="Войти" vertex="1">
+          <mxGeometry height="70" width="170" x="330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-register" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;" value="Зарегистрироваться" vertex="1">
+          <mxGeometry height="70" width="190" x="540" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-profile" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;" value="Просмотреть&#xa;профиль" vertex="1">
+          <mxGeometry height="70" width="170" x="760" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-logout" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Выйти" vertex="1">
+          <mxGeometry height="70" width="150" x="980" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-catalog" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;" value="Просмотреть&#xa;каталог мест" vertex="1">
+          <mxGeometry height="80" width="200" x="330" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-details" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;" value="Открыть карточку&#xa;места" vertex="1">
+          <mxGeometry height="80" width="200" x="580" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-weather" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#111827;strokeWidth=1.5;fontSize=12;" value="Посмотреть погоду&#xa;в месте" vertex="1">
+          <mxGeometry height="80" width="210" x="860" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-want" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Сохранить в&#xa;«хочу посетить»" vertex="1">
+          <mxGeometry height="80" width="200" x="330" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-visited" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Отметить&#xa;«уже был»" vertex="1">
+          <mxGeometry height="80" width="190" x="560" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-note" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Добавить заметку" vertex="1">
+          <mxGeometry height="80" width="190" x="780" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-trips" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Просмотреть&#xa;мои поездки" vertex="1">
+          <mxGeometry height="80" width="200" x="330" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-recognize" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;strokeWidth=1.5;fontSize=12;" value="Распознать место&#xa;по фото" vertex="1">
+          <mxGeometry height="80" width="210" x="580" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-classify" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#4B5563;strokeWidth=1.5;fontSize=12;dashed=1;" value="Классифицировать&#xa;снимок" vertex="1">
+          <mxGeometry height="80" width="210" x="860" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="a-login" edge="1" parent="1" source="guest" style="endArrow=none;html=1;rounded=0;strokeWidth=1.2;strokeColor=#111827;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-register" edge="1" parent="1" source="guest" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#111827;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-register">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-catalog" edge="1" parent="1" source="guest" style="endArrow=none;html=1;rounded=0;strokeWidth=1.2;strokeColor=#111827;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-catalog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-details" edge="1" parent="1" source="guest" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#111827;exitX=1;exitY=0.65;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-details">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="360" />
+              <mxPoint x="560" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-want" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-want">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-visited" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#1D4ED8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-visited">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="540" />
+              <mxPoint x="520" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-note" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#1D4ED8;exitX=1;exitY=0.65;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-note">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="720" />
+              <mxPoint x="750" y="720" />
+              <mxPoint x="750" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-trips" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-trips">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-recognize" edge="1" parent="1" source="user" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#1D4ED8;exitX=1;exitY=0.95;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-recognize">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="780" />
+              <mxPoint x="540" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-weather-sys" edge="1" parent="1" source="weather" style="endArrow=none;html=1;rounded=0;strokeWidth=1.2;strokeColor=#111827;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc-weather">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc-weather" edge="1" parent="1" source="uc-details" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#111827;fontSize=10;fontColor=#111827;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-weather" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inc-classify" edge="1" parent="1" source="uc-recognize" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#111827;fontSize=10;fontColor=#111827;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc-classify" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-want" edge="1" parent="1" source="uc-want" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="uc-details" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-visited" edge="1" parent="1" source="uc-visited" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="uc-details" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-note" edge="1" parent="1" source="uc-note" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" target="uc-details" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-profile" edge="1" parent="1" source="guest" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#111827;exitX=1;exitY=0.05;exitDx=0;exitDy=0;entryX=0;entryY=0.7;entryDx=0;entryDy=0;" target="uc-profile">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="90" />
+              <mxPoint x="740" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a-logout" edge="1" parent="1" style="endArrow=none;html=1;rounded=1;strokeWidth=1.2;strokeColor=#1D4ED8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="uc-logout">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="840" />
+              <mxPoint x="1160" y="820" />
+              <mxPoint x="1100" y="230" />
+            </Array>
+            <mxPoint x="100" y="690" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ext-logout" edge="1" parent="1" source="uc-logout" style="endArrow=open;endSize=10;dashed=1;html=1;rounded=0;strokeWidth=1.2;strokeColor=#1D4ED8;fontSize=10;fontColor=#1D4ED8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uc-profile" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
