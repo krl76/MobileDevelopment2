@@ -2,4 +2,16 @@
 <resources>
     <string name="app_name">SWAY</string>
     <string name="load_stub">Загрузить тестовые данные</string>
+    <string name="login_label">Логин</string>
+    <string name="login_hint">email@example.com</string>
+    <string name="password_label">Пароль</string>
+    <string name="password_hint">Пароль</string>
+    <string name="confirm_password_label">Подтверждение пароля</string>
+    <string name="confirm_password_hint">Повторите пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="to_register">Нет аккаунта? Зарегистрироваться</string>
+    <string name="to_login">Уже есть аккаунт? Войти</string>
+    <string name="auth_error">Неверный логин или пароль. Если аккаунта нет — зарегистрируйтесь.</string>
+    <string name="passwords_mismatch">Пароли не совпадают</string>
 </resources>

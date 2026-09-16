@@ -5,5 +5,8 @@
     <color name="sway_background">#F4F1EA</color>
     <color name="sway_surface">#FFFFFF</color>
     <color name="sway_text">#1F2933</color>
+    <color name="sway_muted">#6B7280</color>
+    <color name="sway_border">#E7E2D8</color>
+    <color name="sway_error">#9B3D3D</color>
     <color name="launcher_bg">#1F6F8B</color>
 </resources>

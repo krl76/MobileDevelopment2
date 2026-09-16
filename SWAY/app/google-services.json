@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392080811558",
+    "project_id": "ru-mirea-kornilov-sway",
+    "storage_bucket": "ru-mirea-kornilov-sway.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392080811558:android:4a91bf5a3df5cebe0ae8e7",
+        "android_client_info": {
+          "package_name": "ru.mirea.kornilov.sway"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDykQj4Y4bLUlwDiJYjhJ8COw6kRFGCZKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

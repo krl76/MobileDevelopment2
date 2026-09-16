@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.mirea.kornilov.lesson9.R
 import ru.mirea.kornilov.lesson9.data.repository.MovieRepositoryImpl
+import ru.mirea.kornilov.lesson9.data.storage.MovieStorage
+import ru.mirea.kornilov.lesson9.data.storage.sharedprefs.SharedPrefMovieStorage
 import ru.mirea.kornilov.lesson9.domain.models.Movie
 import ru.mirea.kornilov.lesson9.domain.repository.MovieRepository
 import ru.mirea.kornilov.lesson9.domain.usecases.GetFavoriteFilmUseCase
@@ -19,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val text = findViewById<EditText>(R.id.editTextMovie)
         val textView = findViewById<TextView>(R.id.textViewMovie)
-        val movieRepository: MovieRepository = MovieRepositoryImpl(this)
+        val movieStorage: MovieStorage = SharedPrefMovieStorage(this)
+        val movieRepository: MovieRepository = MovieRepositoryImpl(movieStorage)
 
         findViewById<View>(R.id.buttonSaveMovie).setOnClickListener {
             val result = SaveMovieToFavoriteUseCase(movieRepository)
