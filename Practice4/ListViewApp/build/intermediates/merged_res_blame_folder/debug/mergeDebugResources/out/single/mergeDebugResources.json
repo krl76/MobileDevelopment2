@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.listviewapp.ListViewApp-debug-31:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.listviewapp.ListViewApp-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.listviewapp.ListViewApp-debug-31:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.listviewapp.ListViewApp-main-33:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.listviewapp.ListViewApp-debug-31:/layout_item_book.xml.flat",
+        "source": "ru.mirea.kornilov.listviewapp.ListViewApp-main-33:/layout/item_book.xml"
+    }
+]

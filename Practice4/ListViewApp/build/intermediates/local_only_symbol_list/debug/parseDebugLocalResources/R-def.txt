@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color launcher_bg
+color muted
+color primary
+color text
+drawable ic_launcher
+id book_list_view
+id textAuthor
+id textTitle
+layout activity_main
+layout item_book
+string app_name
+style Theme.ListViewApp
