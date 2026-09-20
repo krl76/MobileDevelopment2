@@ -7,15 +7,9 @@ import ru.mirea.kornilov.sway.data.network.MockNetworkApi
 import ru.mirea.kornilov.sway.data.network.NetworkApi
 import ru.mirea.kornilov.sway.data.repository.AuthRepositoryImpl
 import ru.mirea.kornilov.sway.data.repository.PlaceRepositoryImpl
-import ru.mirea.kornilov.sway.data.repository.RecognitionRepositoryImpl
-import ru.mirea.kornilov.sway.data.repository.TripRepositoryImpl
-import ru.mirea.kornilov.sway.data.repository.WeatherRepositoryImpl
 import ru.mirea.kornilov.sway.data.storage.sharedprefs.SharedPrefClientStorage
 import ru.mirea.kornilov.sway.domain.repository.AuthRepository
 import ru.mirea.kornilov.sway.domain.repository.PlaceRepository
-import ru.mirea.kornilov.sway.domain.repository.RecognitionRepository
-import ru.mirea.kornilov.sway.domain.repository.TripRepository
-import ru.mirea.kornilov.sway.domain.repository.WeatherRepository
 
 class ViewModelFactory(
     context: Context
@@ -33,16 +27,7 @@ class ViewModelFactory(
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             val networkApi: NetworkApi = MockNetworkApi()
             val placeRepository: PlaceRepository = PlaceRepositoryImpl(networkApi)
-            val weatherRepository: WeatherRepository = WeatherRepositoryImpl(networkApi)
-            val tripRepository: TripRepository = TripRepositoryImpl.create(context)
-            val recognitionRepository: RecognitionRepository = RecognitionRepositoryImpl()
-            return MainViewModel(
-                authRepository,
-                placeRepository,
-                weatherRepository,
-                tripRepository,
-                recognitionRepository
-            ) as T
+            return MainViewModel(placeRepository, authRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: $modelClass")
     }

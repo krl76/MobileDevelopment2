@@ -2,10 +2,11 @@ package ru.mirea.kornilov.sway.presentation
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import ru.mirea.kornilov.sway.R
 
 class MainActivity : AppCompatActivity() {
@@ -16,14 +17,16 @@ class MainActivity : AppCompatActivity() {
         Log.d(MainActivity::class.java.simpleName, "MainActivity created")
 
         val vm = ViewModelProvider(this, ViewModelFactory(this))[MainViewModel::class.java]
-        val textView = findViewById<TextView>(R.id.textViewStub)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewPlaces)
+        val adapter = PlaceAdapter()
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
 
-        vm.getSummary().observe(this) { value ->
-            textView.text = value
+        vm.getPlaces().observe(this) { places ->
+            adapter.setItems(places)
         }
-
-        findViewById<View>(R.id.buttonLoadStub).setOnClickListener {
-            vm.loadStub()
+        vm.getAvatarLetter().observe(this) { letter ->
+            findViewById<TextView>(R.id.textAvatar).text = letter
         }
     }
 }
