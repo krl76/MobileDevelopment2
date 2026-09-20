@@ -33,8 +33,6 @@
 | Контрольное 2 | Состояние интерфейса через LiveData | observe в `AuthActivity` / `MainActivity` |
 | Контрольное 3 | MediatorLiveData: мок-сеть + БД | `MainViewModel`: `networkLive` + `tripsLive` |
 
-Семь функциональных требований из §3 методички (каталог с картинками, карточка, гость ≠ пользователь, TFLite) — это рамка **всего курса**. На этой практике — ViewModel и LiveData. Макеты экранов не менялись.
-
 ---
 
 ## Слои после MVVM
@@ -360,18 +358,3 @@ findViewById<View>(R.id.buttonLoadStub).setOnClickListener {
 </p>
 
 ---
-
-## Соответствие методичке
-
-| Методичка | Сделано |
-|-----------|---------|
-| MVVM в слое app | Activity = UI, ViewModel = логика |
-| `MainViewModel extends ViewModel` | MovieProject и SWAY |
-| Не держать View/Context во ViewModel | repository из Factory |
-| `ViewModelProvider` + Factory | оба проекта |
-| LiveData, Activity observe | `favoriteMovie`, `loggedIn`, `summary` |
-| Поворот не теряет состояние | скрины landscape |
-| Activity → domain только через ViewModel | SWAY Auth/Main |
-| MediatorLiveData, мок-сеть + БД | `networkLive` + `tripsLive` |
-
-Каталог с картинками, карточка места, роли гостя и живой TensorFlow Lite — следующие практики.
