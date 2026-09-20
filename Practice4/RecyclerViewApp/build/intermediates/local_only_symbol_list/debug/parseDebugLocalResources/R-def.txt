@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color card
+color launcher_bg
+color muted
+color primary
+color text
+drawable ic_event_book
+drawable ic_event_cannon
+drawable ic_event_cockade
+drawable ic_event_column
+drawable ic_event_crown
+drawable ic_event_dome
+drawable ic_event_helmet
+drawable ic_event_moon
+drawable ic_event_rocket
+drawable ic_event_ship
+drawable ic_event_star
+drawable ic_event_sword
+drawable ic_event_wall
+drawable ic_launcher
+id imageView
+id recyclerView
+id textViewDescription
+id textViewTitle
+layout activity_main
+layout item_event
+string app_name
+style Theme.RecyclerViewApp

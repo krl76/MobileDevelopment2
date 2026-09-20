@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_sword.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_sword.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_helmet.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_helmet.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_crown.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_crown.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_wall.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_wall.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_cannon.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_cannon.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_column.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_column.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_star.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_star.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_book.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_book.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_dome.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_dome.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/layout_item_event.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/layout/item_event.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_ship.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_ship.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_rocket.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_rocket.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_cockade.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_cockade.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_event_moon.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_event_moon.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-debug-32:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.recyclerviewapp.RecyclerViewApp-main-34:/drawable/ic_launcher.xml"
+    }
+]

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FAF7FC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="launcher_bg">#7B61C8</color>
+    <color name="muted">#6B7280</color>
+    <color name="primary">#7B61C8</color>
+    <color name="text">#1F2933</color>
+    <string name="app_name">RecyclerViewApp</string>
+    <style name="Theme.RecyclerViewApp" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>
