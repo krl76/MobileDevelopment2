@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-debug-31:/drawable_ic_item.xml.flat",
+        "source": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-main-33:/drawable/ic_item.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-debug-31:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-main-33:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-debug-31:/layout_item.xml.flat",
+        "source": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-main-33:/layout/item.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-debug-31:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.scrollviewapp.ScrollViewApp-main-33:/layout/activity_main.xml"
+    }
+]

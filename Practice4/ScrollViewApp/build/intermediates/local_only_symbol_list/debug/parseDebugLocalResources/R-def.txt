@@ -1,0 +1,17 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color launcher_bg
+color muted
+color primary
+color text
+drawable ic_item
+drawable ic_launcher
+id imageView
+id scrollView
+id textView
+id wrapper
+layout activity_main
+layout item
+string app_name
+style Theme.ScrollViewApp

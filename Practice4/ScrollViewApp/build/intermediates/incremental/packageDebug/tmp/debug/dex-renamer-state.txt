@@ -1,0 +1,10 @@
+#Sun Sep 20 15:46:42 MSK 2026
+base.0=E\:\\Projects\\MobileDevelopment2\\Practice4\\ScrollViewApp\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=E\:\\Projects\\MobileDevelopment2\\Practice4\\ScrollViewApp\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=E\:\\Projects\\MobileDevelopment2\\Practice4\\ScrollViewApp\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=12/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

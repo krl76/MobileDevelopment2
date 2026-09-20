@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ScrollViewApp" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>
