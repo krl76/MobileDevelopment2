@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ResultApiFragmentApp</string>
+    <string name="data_title">Передача результата</string>
+    <string name="info_hint">Текст для нижней панели</string>
+    <string name="open_sheet">Открыть панель</string>
+    <string name="sheet_title">Фрагмент получил</string>
+    <string name="empty_result">Пустая строка</string>
+</resources>

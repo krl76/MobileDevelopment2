@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F4F1EA</color>
+    <color name="border">#E7E2D8</color>
+    <color name="launcher_bg">#1F6F8B</color>
+    <color name="primary">#1F6F8B</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text">#1F2933</color>
+    <string name="app_name">FragmentManagerApp</string>
+    <string name="countries_title">Страны</string>
+    <string name="country_capital">Столица: %s</string>
+    <string name="details_empty">Выберите страну</string>
+    <style name="Theme.FragmentManagerApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

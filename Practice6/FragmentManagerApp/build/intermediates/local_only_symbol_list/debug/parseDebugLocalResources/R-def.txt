@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color border
+color launcher_bg
+color primary
+color surface
+color text
+drawable ic_launcher
+id details_container
+id list_container
+id recyclerCountries
+id textCapital
+id textCountryName
+id textDescription
+layout activity_main
+layout fragment_countries
+layout fragment_details
+layout item_country
+string app_name
+string countries_title
+string country_capital
+string details_empty
+style Theme.FragmentManagerApp

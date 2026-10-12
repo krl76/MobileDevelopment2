@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-debug-39:/layout_fragment_details.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-main-41:/layout/fragment_details.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-debug-39:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-main-41:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-debug-39:/layout_fragment_countries.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-main-41:/layout/fragment_countries.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-debug-39:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-debug-39:/layout_item_country.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentmanagerapp.FragmentManagerApp-main-41:/layout/item_country.xml"
+    }
+]

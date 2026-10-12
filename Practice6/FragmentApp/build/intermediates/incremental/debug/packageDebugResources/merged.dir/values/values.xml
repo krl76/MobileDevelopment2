@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F4F1EA</color>
+    <color name="launcher_bg">#1F6F8B</color>
+    <color name="primary">#1F6F8B</color>
+    <color name="text">#1F2933</color>
+    <string name="app_name">FragmentApp</string>
+    <string name="fragment_caption">Фрагмент получил аргумент</string>
+    <string name="student_number">Номер по списку: %d</string>
+    <style name="Theme.FragmentApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

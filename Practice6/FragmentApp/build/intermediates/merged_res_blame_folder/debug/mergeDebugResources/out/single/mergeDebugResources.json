@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.fragmentapp.FragmentApp-debug-37:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentapp.FragmentApp-main-39:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentapp.FragmentApp-debug-37:/layout_fragment_blank.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentapp.FragmentApp-main-39:/layout/fragment_blank.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.fragmentapp.FragmentApp-debug-37:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.fragmentapp.FragmentApp-main-39:/layout/activity_main.xml"
+    }
+]

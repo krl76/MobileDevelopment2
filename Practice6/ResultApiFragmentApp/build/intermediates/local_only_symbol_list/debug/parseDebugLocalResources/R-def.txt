@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color border
+color launcher_bg
+color muted
+color primary
+color surface
+color text
+drawable bg_field
+drawable ic_launcher
+id buttonOpenBottomSheet
+id editTextInfo
+id fragment_container_view
+id textResult
+layout activity_main
+layout fragment_bottom_sheet
+layout fragment_data
+string app_name
+string data_title
+string empty_result
+string info_hint
+string open_sheet
+string sheet_title
+style Theme.ResultApiFragmentApp
