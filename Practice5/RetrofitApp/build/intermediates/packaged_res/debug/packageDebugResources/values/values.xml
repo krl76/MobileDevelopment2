@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F4F1EA</color>
+    <color name="error_image">#9B3D3D</color>
+    <color name="launcher_bg">#1F6F8B</color>
+    <color name="placeholder">#E7E2D8</color>
+    <color name="primary">#1F6F8B</color>
+    <color name="text">#1F2933</color>
+    <string name="app_name">RetrofitApp</string>
+    <string name="load_error">Не удалось загрузить список</string>
+    <string name="update_error">Не удалось обновить дело</string>
+    <style name="Theme.RetrofitApp" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

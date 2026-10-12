@@ -3,8 +3,7 @@ package ru.mirea.kornilov.sway.presentation
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import ru.mirea.kornilov.sway.data.network.MockNetworkApi
-import ru.mirea.kornilov.sway.data.network.NetworkApi
+import ru.mirea.kornilov.sway.data.network.PlaceApi
 import ru.mirea.kornilov.sway.data.repository.AuthRepositoryImpl
 import ru.mirea.kornilov.sway.data.repository.PlaceRepositoryImpl
 import ru.mirea.kornilov.sway.data.storage.sharedprefs.SharedPrefClientStorage
@@ -25,8 +24,7 @@ class ViewModelFactory(
             return AuthViewModel(authRepository) as T
         }
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
-            val networkApi: NetworkApi = MockNetworkApi()
-            val placeRepository: PlaceRepository = PlaceRepositoryImpl(networkApi)
+            val placeRepository: PlaceRepository = PlaceRepositoryImpl(PlaceApi.create())
             return MainViewModel(placeRepository, authRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class: $modelClass")

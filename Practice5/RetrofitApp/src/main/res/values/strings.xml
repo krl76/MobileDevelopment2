@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RetrofitApp</string>
+    <string name="load_error">Не удалось загрузить список</string>
+    <string name="update_error">Не удалось обновить дело</string>
+</resources>

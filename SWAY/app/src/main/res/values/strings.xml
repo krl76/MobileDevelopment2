@@ -15,6 +15,9 @@
     <string name="auth_error">Неверный логин или пароль. Если аккаунта нет — зарегистрируйтесь.</string>
     <string name="passwords_mismatch">Пароли не совпадают</string>
     <string name="catalog_title">Каталог</string>
+    <string name="catalog_loading">Загрузка каталога…</string>
+    <string name="catalog_no_network">Нет сети. Проверь интернет и открой каталог снова.</string>
+    <string name="catalog_bad_response">Не удалось получить каталог с сервера.</string>
     <string name="tab_catalog">Каталог</string>
     <string name="tab_trips">Поездки</string>
     <string name="tab_camera">Камера</string>

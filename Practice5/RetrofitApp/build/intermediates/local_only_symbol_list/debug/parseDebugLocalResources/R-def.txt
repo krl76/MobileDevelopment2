@@ -1,0 +1,22 @@
+R_DEF: Internal format may change without notice
+local
+color background
+color error_image
+color launcher_bg
+color placeholder
+color primary
+color text
+drawable bg_error_image
+drawable bg_placeholder
+drawable ic_launcher
+id checkBoxCompleted
+id imageTodo
+id recyclerView
+id textStatus
+id textViewTitle
+layout activity_main
+layout item_todo
+string app_name
+string load_error
+string update_error
+style Theme.RetrofitApp

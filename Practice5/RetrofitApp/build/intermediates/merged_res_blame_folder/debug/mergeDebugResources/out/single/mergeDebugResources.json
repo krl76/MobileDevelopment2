@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "ru.mirea.kornilov.retrofitapp.RetrofitApp-debug-32:/layout_item_todo.xml.flat",
+        "source": "ru.mirea.kornilov.retrofitapp.RetrofitApp-main-34:/layout/item_todo.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.retrofitapp.RetrofitApp-debug-32:/layout_activity_main.xml.flat",
+        "source": "ru.mirea.kornilov.retrofitapp.RetrofitApp-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.retrofitapp.RetrofitApp-debug-32:/drawable_bg_error_image.xml.flat",
+        "source": "ru.mirea.kornilov.retrofitapp.RetrofitApp-main-34:/drawable/bg_error_image.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.retrofitapp.RetrofitApp-debug-32:/drawable_ic_launcher.xml.flat",
+        "source": "ru.mirea.kornilov.retrofitapp.RetrofitApp-main-34:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "ru.mirea.kornilov.retrofitapp.RetrofitApp-debug-32:/drawable_bg_placeholder.xml.flat",
+        "source": "ru.mirea.kornilov.retrofitapp.RetrofitApp-main-34:/drawable/bg_placeholder.xml"
+    }
+]
