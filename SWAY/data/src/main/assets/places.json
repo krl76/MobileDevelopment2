@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Альпы",
+    "country": "Швейцария",
+    "description": "Горные маршруты и озёра.",
+    "imageUrl": "https://picsum.photos/id/29/800/450",
+    "sceneType": "MOUNTAINS"
+  },
+  {
+    "id": 2,
+    "name": "Санторини",
+    "country": "Греция",
+    "description": "Белые дома над морем.",
+    "imageUrl": "https://picsum.photos/id/1015/800/450",
+    "sceneType": "SEA"
+  },
+  {
+    "id": 3,
+    "name": "Киото",
+    "country": "Япония",
+    "description": "Храмы и старый город.",
+    "imageUrl": "https://picsum.photos/id/1016/800/450",
+    "sceneType": "CITY"
+  },
+  {
+    "id": 4,
+    "name": "Чёрный лес",
+    "country": "Германия",
+    "description": "Тропы среди елей.",
+    "imageUrl": "https://picsum.photos/id/1018/800/450",
+    "sceneType": "FOREST"
+  },
+  {
+    "id": 5,
+    "name": "Лиссабон",
+    "country": "Португалия",
+    "description": "Трамваи и холмы у океана.",
+    "imageUrl": "https://picsum.photos/id/1019/800/450",
+    "sceneType": "CITY"
+  },
+  {
+    "id": 6,
+    "name": "Каппадокия",
+    "country": "Турция",
+    "description": "Шары над долинами.",
+    "imageUrl": "https://picsum.photos/id/1011/800/450",
+    "sceneType": "MOUNTAINS"
+  },
+  {
+    "id": 7,
+    "name": "Байкал",
+    "country": "Россия",
+    "description": "Лед и скалы у воды.",
+    "imageUrl": "https://picsum.photos/id/1036/800/450",
+    "sceneType": "SEA"
+  },
+  {
+    "id": 8,
+    "name": "Рейкьявик",
+    "country": "Исландия",
+    "description": "Цветные дома и океан.",
+    "imageUrl": "https://picsum.photos/id/1039/800/450",
+    "sceneType": "CITY"
+  }
+]
