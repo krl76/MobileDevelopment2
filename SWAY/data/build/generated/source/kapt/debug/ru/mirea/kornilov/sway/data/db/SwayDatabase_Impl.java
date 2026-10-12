@@ -31,12 +31,12 @@ public final class SwayDatabase_Impl extends SwayDatabase {
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(1) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(2) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS `trips` (`placeId` INTEGER NOT NULL, `wantToVisit` INTEGER NOT NULL, `visited` INTEGER NOT NULL, `note` TEXT NOT NULL, PRIMARY KEY(`placeId`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `trips` (`userId` TEXT NOT NULL, `placeId` INTEGER NOT NULL, `wantToVisit` INTEGER NOT NULL, `visited` INTEGER NOT NULL, `note` TEXT NOT NULL, PRIMARY KEY(`userId`, `placeId`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '90b17cea6075afa2421de07255f2dcad')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd63526dd732c1061301757940d0ccb78')");
       }
 
       @Override
@@ -85,8 +85,9 @@ public final class SwayDatabase_Impl extends SwayDatabase {
       @NonNull
       public RoomOpenHelper.ValidationResult onValidateSchema(
           @NonNull final SupportSQLiteDatabase db) {
-        final HashMap<String, TableInfo.Column> _columnsTrips = new HashMap<String, TableInfo.Column>(4);
-        _columnsTrips.put("placeId", new TableInfo.Column("placeId", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsTrips = new HashMap<String, TableInfo.Column>(5);
+        _columnsTrips.put("userId", new TableInfo.Column("userId", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTrips.put("placeId", new TableInfo.Column("placeId", "INTEGER", true, 2, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTrips.put("wantToVisit", new TableInfo.Column("wantToVisit", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTrips.put("visited", new TableInfo.Column("visited", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTrips.put("note", new TableInfo.Column("note", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -101,7 +102,7 @@ public final class SwayDatabase_Impl extends SwayDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "90b17cea6075afa2421de07255f2dcad", "b35b053012baca728e3b2319844ce508");
+    }, "d63526dd732c1061301757940d0ccb78", "ae9e87efb09297a1d8792cf61150d6e2");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;

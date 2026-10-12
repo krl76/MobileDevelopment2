@@ -1,11 +1,11 @@
 package ru.mirea.kornilov.sway.data.db
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity(tableName = "trips")
+@Entity(tableName = "trips", primaryKeys = ["userId", "placeId"])
 data class TripEntity(
-    @PrimaryKey val placeId: Int,
+    val userId: String,
+    val placeId: Int,
     val wantToVisit: Boolean,
     val visited: Boolean,
     val note: String

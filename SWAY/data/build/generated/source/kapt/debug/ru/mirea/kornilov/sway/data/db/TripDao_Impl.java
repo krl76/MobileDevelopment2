@@ -30,21 +30,26 @@ public final class TripDao_Impl implements TripDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR REPLACE INTO `trips` (`placeId`,`wantToVisit`,`visited`,`note`) VALUES (?,?,?,?)";
+        return "INSERT OR REPLACE INTO `trips` (`userId`,`placeId`,`wantToVisit`,`visited`,`note`) VALUES (?,?,?,?,?)";
       }
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
           @NonNull final TripEntity entity) {
-        statement.bindLong(1, entity.getPlaceId());
-        final int _tmp = entity.getWantToVisit() ? 1 : 0;
-        statement.bindLong(2, _tmp);
-        final int _tmp_1 = entity.getVisited() ? 1 : 0;
-        statement.bindLong(3, _tmp_1);
-        if (entity.getNote() == null) {
-          statement.bindNull(4);
+        if (entity.getUserId() == null) {
+          statement.bindNull(1);
         } else {
-          statement.bindString(4, entity.getNote());
+          statement.bindString(1, entity.getUserId());
+        }
+        statement.bindLong(2, entity.getPlaceId());
+        final int _tmp = entity.getWantToVisit() ? 1 : 0;
+        statement.bindLong(3, _tmp);
+        final int _tmp_1 = entity.getVisited() ? 1 : 0;
+        statement.bindLong(4, _tmp_1);
+        if (entity.getNote() == null) {
+          statement.bindNull(5);
+        } else {
+          statement.bindString(5, entity.getNote());
         }
       }
     };
@@ -63,12 +68,19 @@ public final class TripDao_Impl implements TripDao {
   }
 
   @Override
-  public List<TripEntity> getAll() {
-    final String _sql = "SELECT * FROM trips";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+  public List<TripEntity> getAll(final String userId) {
+    final String _sql = "SELECT * FROM trips WHERE userId = ?";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    if (userId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, userId);
+    }
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
       final int _cursorIndexOfPlaceId = CursorUtil.getColumnIndexOrThrow(_cursor, "placeId");
       final int _cursorIndexOfWantToVisit = CursorUtil.getColumnIndexOrThrow(_cursor, "wantToVisit");
       final int _cursorIndexOfVisited = CursorUtil.getColumnIndexOrThrow(_cursor, "visited");
@@ -76,6 +88,12 @@ public final class TripDao_Impl implements TripDao {
       final List<TripEntity> _result = new ArrayList<TripEntity>(_cursor.getCount());
       while (_cursor.moveToNext()) {
         final TripEntity _item;
+        final String _tmpUserId;
+        if (_cursor.isNull(_cursorIndexOfUserId)) {
+          _tmpUserId = null;
+        } else {
+          _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+        }
         final int _tmpPlaceId;
         _tmpPlaceId = _cursor.getInt(_cursorIndexOfPlaceId);
         final boolean _tmpWantToVisit;
@@ -92,7 +110,7 @@ public final class TripDao_Impl implements TripDao {
         } else {
           _tmpNote = _cursor.getString(_cursorIndexOfNote);
         }
-        _item = new TripEntity(_tmpPlaceId,_tmpWantToVisit,_tmpVisited,_tmpNote);
+        _item = new TripEntity(_tmpUserId,_tmpPlaceId,_tmpWantToVisit,_tmpVisited,_tmpNote);
         _result.add(_item);
       }
       return _result;
@@ -103,20 +121,33 @@ public final class TripDao_Impl implements TripDao {
   }
 
   @Override
-  public TripEntity getByPlaceId(final int placeId) {
-    final String _sql = "SELECT * FROM trips WHERE placeId = ? LIMIT 1";
-    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+  public TripEntity getByPlace(final String userId, final int placeId) {
+    final String _sql = "SELECT * FROM trips WHERE userId = ? AND placeId = ? LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 2);
     int _argIndex = 1;
+    if (userId == null) {
+      _statement.bindNull(_argIndex);
+    } else {
+      _statement.bindString(_argIndex, userId);
+    }
+    _argIndex = 2;
     _statement.bindLong(_argIndex, placeId);
     __db.assertNotSuspendingTransaction();
     final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
     try {
+      final int _cursorIndexOfUserId = CursorUtil.getColumnIndexOrThrow(_cursor, "userId");
       final int _cursorIndexOfPlaceId = CursorUtil.getColumnIndexOrThrow(_cursor, "placeId");
       final int _cursorIndexOfWantToVisit = CursorUtil.getColumnIndexOrThrow(_cursor, "wantToVisit");
       final int _cursorIndexOfVisited = CursorUtil.getColumnIndexOrThrow(_cursor, "visited");
       final int _cursorIndexOfNote = CursorUtil.getColumnIndexOrThrow(_cursor, "note");
       final TripEntity _result;
       if (_cursor.moveToFirst()) {
+        final String _tmpUserId;
+        if (_cursor.isNull(_cursorIndexOfUserId)) {
+          _tmpUserId = null;
+        } else {
+          _tmpUserId = _cursor.getString(_cursorIndexOfUserId);
+        }
         final int _tmpPlaceId;
         _tmpPlaceId = _cursor.getInt(_cursorIndexOfPlaceId);
         final boolean _tmpWantToVisit;
@@ -133,7 +164,7 @@ public final class TripDao_Impl implements TripDao {
         } else {
           _tmpNote = _cursor.getString(_cursorIndexOfNote);
         }
-        _result = new TripEntity(_tmpPlaceId,_tmpWantToVisit,_tmpVisited,_tmpNote);
+        _result = new TripEntity(_tmpUserId,_tmpPlaceId,_tmpWantToVisit,_tmpVisited,_tmpNote);
       } else {
         _result = null;
       }

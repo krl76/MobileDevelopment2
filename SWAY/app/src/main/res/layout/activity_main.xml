@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center_vertical"
@@ -14,6 +15,7 @@
         android:paddingEnd="16dp">
 
         <TextView
+            android:id="@+id/textScreenTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,52 +30,41 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:background="@drawable/bg_avatar"
+            android:clickable="true"
+            android:contentDescription="@string/tab_profile"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
             android:textColor="@android:color/white"
             android:textSize="13sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewPlaces"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp" />
-
-        <TextView
-            android:id="@+id/textCatalogStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="24dp"
-            android:textColor="@color/sway_muted"
-            android:textSize="16sp"
-            android:visibility="gone" />
-    </FrameLayout>
+        android:layout_weight="1" />
 
     <LinearLayout
+        android:id="@+id/tabBar"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@drawable/bg_tabbar"
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/tabCatalog"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imageTabCatalog"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:contentDescription="@null"
@@ -81,6 +72,7 @@
                 android:tint="@color/sway_primary" />
 
             <TextView
+                android:id="@+id/textTabCatalog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -91,20 +83,40 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/tabTrips"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_tab_pin"
-                android:tint="@color/sway_muted" />
+            <FrameLayout
+                android:layout_width="20dp"
+                android:layout_height="16dp">
+
+                <ImageView
+                    android:id="@+id/imageTabTrips"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_tab_pin"
+                    android:tint="@color/sway_muted" />
+
+                <ImageView
+                    android:id="@+id/imageLockTrips"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="end|top"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_lock"
+                    android:visibility="gone" />
+            </FrameLayout>
 
             <TextView
+                android:id="@+id/textTabTrips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -115,20 +127,40 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/tabCamera"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:contentDescription="@null"
-                android:src="@drawable/ic_tab_cam"
-                android:tint="@color/sway_muted" />
+            <FrameLayout
+                android:layout_width="20dp"
+                android:layout_height="16dp">
+
+                <ImageView
+                    android:id="@+id/imageTabCamera"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_tab_cam"
+                    android:tint="@color/sway_muted" />
+
+                <ImageView
+                    android:id="@+id/imageLockCamera"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="end|top"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_lock"
+                    android:visibility="gone" />
+            </FrameLayout>
 
             <TextView
+                android:id="@+id/textTabCamera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
@@ -139,13 +171,17 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/tabProfile"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/imageTabProfile"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:contentDescription="@null"
@@ -153,6 +189,7 @@
                 android:tint="@color/sway_muted" />
 
             <TextView
+                android:id="@+id/textTabProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"

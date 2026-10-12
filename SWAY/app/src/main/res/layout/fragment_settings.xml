@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="24dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_label"
+            android:textColor="@color/sway_muted"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textSettingsEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/sway_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/first_name_label"
+            android:textColor="@color/sway_muted"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/editFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/first_name_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="@color/sway_text"
+            android:textColorHint="@color/sway_muted"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sway_border" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/last_name_label"
+            android:textColor="@color/sway_muted"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/last_name_hint"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textCapWords"
+            android:textColor="@color/sway_text"
+            android:textColorHint="@color/sway_muted"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sway_border" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/nickname_label"
+            android:textColor="@color/sway_muted"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/editNickname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/nickname_hint"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/sway_text"
+            android:textColorHint="@color/sway_muted"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sway_border" />
+
+        <Button
+            android:id="@+id/buttonSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_primary_button"
+            android:text="@string/settings_save"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:backgroundTint="@null" />
+
+        <TextView
+            android:id="@+id/textSettingsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/sway_error"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

@@ -6,9 +6,6 @@ class AddPlaceNoteUseCase(
     private val tripRepository: TripRepository
 ) {
     fun execute(placeId: Int, note: String): Boolean {
-        if (note.isBlank()) {
-            return false
-        }
         return tripRepository.addNote(placeId, note.trim())
     }
 }

@@ -15,7 +15,7 @@ class PlaceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val countryView: TextView = itemView.findViewById(R.id.textPlaceCountry)
     private val sceneView: TextView = itemView.findViewById(R.id.textPlaceScene)
 
-    fun bind(place: Place) {
+    fun bind(place: Place, onPlaceClick: (Place) -> Unit) {
         nameView.text = place.name
         countryView.text = place.country
         sceneView.setText(sceneLabel(place.sceneType))
@@ -24,6 +24,7 @@ class PlaceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             placeholder(R.drawable.bg_place_placeholder)
             error(R.drawable.bg_place_placeholder)
         }
+        itemView.setOnClickListener { onPlaceClick(place) }
     }
 
     private fun sceneLabel(sceneType: SceneType): Int = when (sceneType) {

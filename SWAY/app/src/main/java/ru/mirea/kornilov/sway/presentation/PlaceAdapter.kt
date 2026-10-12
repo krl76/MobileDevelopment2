@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.mirea.kornilov.sway.R
 import ru.mirea.kornilov.sway.domain.models.Place
 
-class PlaceAdapter : RecyclerView.Adapter<PlaceViewHolder>() {
+class PlaceAdapter(
+    private val onPlaceClick: (Place) -> Unit
+) : RecyclerView.Adapter<PlaceViewHolder>() {
     private var items: List<Place> = emptyList()
 
     fun setItems(places: List<Place>) {
@@ -21,7 +23,7 @@ class PlaceAdapter : RecyclerView.Adapter<PlaceViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: PlaceViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(items[position], onPlaceClick)
     }
 
     override fun getItemCount(): Int = items.size

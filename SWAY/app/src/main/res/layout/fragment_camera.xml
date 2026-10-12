@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_preview">
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/recognize_preview"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/previewEmpty"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/imagePreview"
+                app:layout_constraintEnd_toEndOf="@id/imagePreview"
+                app:layout_constraintStart_toStartOf="@id/imagePreview"
+                app:layout_constraintTop_toTopOf="@id/imagePreview">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_tab_cam"
+                    app:tint="@color/sway_muted" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/recognize_preview"
+                    android:textColor="@color/sway_muted"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/buttonTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_primary_button"
+            android:text="@string/recognize_take"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/buttonPickGallery"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_outline_button"
+            android:text="@string/recognize_pick"
+            android:textAllCaps="false"
+            android:textColor="@color/sway_text"
+            android:textSize="15sp"
+            app:backgroundTint="@null" />
+
+        <LinearLayout
+            android:id="@+id/recognizeResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textSceneChip"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@drawable/bg_chip_accent"
+                android:gravity="center"
+                android:textColor="@color/sway_primary_dark"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/listSimilar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/textSimilarEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/recognize_empty"
+                android:textColor="@color/sway_muted"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/recognize_note"
+                android:textColor="@color/sway_muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -5,6 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ru.mirea.kornilov.sway.R
+import ru.mirea.kornilov.sway.domain.models.AuthError
+import ru.mirea.kornilov.sway.domain.models.AuthFailure
 import ru.mirea.kornilov.sway.domain.repository.AuthRepository
 import ru.mirea.kornilov.sway.domain.usecases.GetProfileUseCase
 import ru.mirea.kornilov.sway.domain.usecases.LoginUseCase
@@ -15,7 +17,7 @@ class AuthViewModel(
 ) : ViewModel() {
 
     private val registerMode = MutableLiveData(false)
-    private val statusRes = MutableLiveData<Int?>(null)
+    private val status = MutableLiveData<AuthMessage?>(null)
     private val loggedIn = MutableLiveData(false)
 
     init {
@@ -26,31 +28,65 @@ class AuthViewModel(
     }
 
     fun getRegisterMode(): LiveData<Boolean> = registerMode
-    fun getStatusRes(): LiveData<Int?> = statusRes
+    fun getStatus(): LiveData<AuthMessage?> = status
     fun getLoggedIn(): LiveData<Boolean> = loggedIn
 
     fun toggleMode() {
         registerMode.value = !(registerMode.value ?: false)
-        statusRes.value = null
+        status.value = null
     }
 
-    fun submit(login: String, password: String, confirm: String) {
-        statusRes.value = null
-        val onResult: (Boolean) -> Unit = { ok ->
-            if (ok) {
+    fun openRegister() {
+        registerMode.value = true
+        status.value = null
+    }
+
+    fun submit(
+        login: String,
+        password: String,
+        confirm: String,
+        nickname: String,
+        firstName: String,
+        lastName: String
+    ) {
+        status.value = null
+        val onResult: (AuthFailure?) -> Unit = { failure ->
+            if (failure == null) {
                 loggedIn.postValue(true)
             } else {
-                statusRes.postValue(R.string.auth_error)
+                val detail = if (failure.error == AuthError.PROFILE_NOT_SAVED) failure.detail else ""
+                status.postValue(AuthMessage(messageFor(failure.error), detail))
             }
         }
         if (registerMode.value == true) {
-            if (password != confirm) {
-                statusRes.value = R.string.passwords_mismatch
+            if (nickname.isBlank() || firstName.isBlank() || lastName.isBlank()) {
+                status.value = AuthMessage(R.string.profile_required)
                 return
             }
-            RegisterUseCase(authRepository).execute(login, password, onResult)
+            if (password != confirm) {
+                status.value = AuthMessage(R.string.passwords_mismatch)
+                return
+            }
+            RegisterUseCase(authRepository).execute(
+                login,
+                password,
+                nickname,
+                firstName,
+                lastName,
+                onResult
+            )
         } else {
             LoginUseCase(authRepository).execute(login, password, onResult)
+        }
+    }
+
+    private fun messageFor(error: AuthError): Int {
+        return when (error) {
+            AuthError.EMAIL_ALREADY_USED -> R.string.auth_email_used
+            AuthError.WEAK_PASSWORD -> R.string.auth_weak_password
+            AuthError.PROFILE_NOT_SAVED -> R.string.auth_profile_failed
+            AuthError.NETWORK -> R.string.auth_network
+            AuthError.INVALID_CREDENTIALS -> R.string.auth_error
         }
     }
 
@@ -59,3 +95,8 @@ class AuthViewModel(
         super.onCleared()
     }
 }
+
+data class AuthMessage(
+    val resId: Int,
+    val detail: String = ""
+)

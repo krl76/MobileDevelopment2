@@ -26,6 +26,7 @@ dependencies {
     implementation project(':domain')
     implementation platform('com.google.firebase:firebase-bom:32.8.1')
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
     implementation 'androidx.room:room-runtime:2.6.1'
     kapt 'androidx.room:room-compiler:2.6.1'
     implementation 'com.squareup.retrofit2:retrofit:2.11.0'

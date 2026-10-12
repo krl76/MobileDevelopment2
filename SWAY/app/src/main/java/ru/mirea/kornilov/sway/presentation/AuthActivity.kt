@@ -29,7 +29,11 @@ class AuthActivity : AppCompatActivity() {
         val loginField = findViewById<EditText>(R.id.editLogin)
         val passwordField = findViewById<EditText>(R.id.editPassword)
         val confirmField = findViewById<EditText>(R.id.editConfirmPassword)
+        val nicknameField = findViewById<EditText>(R.id.editNickname)
+        val firstNameField = findViewById<EditText>(R.id.editFirstName)
+        val lastNameField = findViewById<EditText>(R.id.editLastName)
         val confirmBlock = findViewById<LinearLayout>(R.id.confirmPasswordBlock)
+        val profileBlock = findViewById<LinearLayout>(R.id.profileBlock)
         val submit = findViewById<Button>(R.id.buttonSubmit)
         val switchMode = findViewById<TextView>(R.id.textSwitchMode)
         val status = findViewById<TextView>(R.id.textAuthStatus)
@@ -39,19 +43,36 @@ class AuthActivity : AppCompatActivity() {
         }
         vm.getRegisterMode().observe(this) { registerMode ->
             confirmBlock.visibility = if (registerMode) View.VISIBLE else View.GONE
+            profileBlock.visibility = if (registerMode) View.VISIBLE else View.GONE
             submit.setText(if (registerMode) R.string.sign_up else R.string.sign_in)
             switchMode.setText(if (registerMode) R.string.to_login else R.string.to_register)
         }
-        vm.getStatusRes().observe(this) { resId ->
-            status.text = if (resId == null) "" else getString(resId)
+        vm.getStatus().observe(this) { message ->
+            status.text = if (message == null) {
+                ""
+            } else if (message.detail.isBlank()) {
+                getString(message.resId)
+            } else {
+                getString(message.resId) + "\n" + message.detail
+            }
         }
 
+        if (intent.getBooleanExtra(EXTRA_REGISTER, false)) {
+            vm.openRegister()
+        }
         switchMode.setOnClickListener { vm.toggleMode() }
+        findViewById<View>(R.id.buttonGuest).setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
         submit.setOnClickListener {
             vm.submit(
                 loginField.text.toString(),
                 passwordField.text.toString(),
-                confirmField.text.toString()
+                confirmField.text.toString(),
+                nicknameField.text.toString(),
+                firstNameField.text.toString(),
+                lastNameField.text.toString()
             )
         }
     }
@@ -59,5 +80,9 @@ class AuthActivity : AppCompatActivity() {
     private fun openMain() {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+
+    companion object {
+        const val EXTRA_REGISTER = "register"
     }
 }
